@@ -1,25 +1,25 @@
-"""Numerical differentiation."""
+"""Численное дифференцирование."""
 
 import numpy as np
 
 
 def backward_difference(x, y):
-    """Calculate the first derivative.
+    """Вычисляет первую производную.
 
-    All values in 'x' must be equally spaced.
+    Все значения в 'x' должны быть равномерно распределены.
 
     Args:
-        x (numpy.ndarray): x values.
-        y (numpy.ndarray): y values.
+        x (numpy.ndarray): значения x.
+        y (numpy.ndarray): значения y.
 
     Returns:
-        dy (numpy.ndarray): the first derivative values.
+        dy (numpy.ndarray): значения первой производной.
     """
     if x.size < 2 or y.size < 2:
-        raise ValueError("'x' and 'y' arrays must have 2 values or more.")
+        raise ValueError("Массивы 'x' и 'y' должны содержать как минимум 2 значения.")
 
     if x.size != y.size:
-        raise ValueError("'x' and 'y' must have same size.")
+        raise ValueError("Массивы 'x' и 'y' должны иметь одинаковый размер.")
 
     def dy_difference(h, y0, y1):
         return (y1 - y0) / h
@@ -38,22 +38,22 @@ def backward_difference(x, y):
 
 
 def three_point(x, y):
-    """Calculate the first derivative.
+    """Вычисляет первую производную.
 
-    All values in 'x' must be equally spaced.
+    Все значения в 'x' должны быть равномерно распределены.
 
     Args:
-        x (numpy.ndarray): x values.
-        y (numpy.ndarray): y values.
+        x (numpy.ndarray): значения x.
+        y (numpy.ndarray): значения y.
 
     Returns:
-        dy (numpy.ndarray): the first derivative values.
+        dy (numpy.ndarray): значения первой производной.
     """
     if x.size < 3 or y.size < 3:
-        raise ValueError("'x' and 'y' arrays must have 3 values or more.")
+        raise ValueError("Массивы 'x' и 'y' должны содержать как минимум 3 значения.")
 
     if x.size != y.size:
-        raise ValueError("'x' and 'y' must have same size.")
+        raise ValueError("Массивы 'x' и 'y' должны иметь одинаковый размер.")
 
     def dy_mid(h, y0, y2):
         return (1 / (2 * h)) * (y2 - y0)
@@ -76,22 +76,22 @@ def three_point(x, y):
 
 
 def five_point(x, y):
-    """Calculate the first derivative.
+    """Вычисляет первую производную.
 
-    All values in 'x' must be equally spaced.
+    Все значения в 'x' должны быть равномерно распределены.
 
     Args:
-        x (numpy.ndarray): x values.
-        y (numpy.ndarray): y values.
+        x (numpy.ndarray): значения x.
+        y (numpy.ndarray): значения y.
 
     Returns:
-        dy (numpy.ndarray): the first derivative values.
+        dy (numpy.ndarray): значения первой производной.
     """
     if x.size < 6 or y.size < 6:
-        raise ValueError("'x' and 'y' arrays must have 6 values or more.")
+        raise ValueError("Массивы 'x' и 'y' должны содержать как минимум 6 значений.")
 
     if x.size != y.size:
-        raise ValueError("'x' and 'y' must have same size.")
+        raise ValueError("Массивы 'x' и 'y' должны иметь одинаковый размер.")
 
     def dy_mid(h, y0, y1, y3, y4):
         return (1 / (12 * h)) * (y0 - 8 * y1 + 8 * y3 - y4)
