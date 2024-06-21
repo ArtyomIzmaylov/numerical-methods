@@ -1,8 +1,3 @@
-# Numerical Methods in Python [![Actions Status](https://github.com/cfgnunes/numerical-methods-python/workflows/build/badge.svg)](https://github.com/cfgnunes/numerical-methods-python/actions)
-
-Numerical methods implementation in Python.
-
-For the implementation in MATLAB, see [this repository](https://github.com/cfgnunes/numerical-methods-matlab).
 
 ## Начало работы
 
@@ -63,42 +58,42 @@ python3 main.py
 * Метод Грегори-Ньютона
 * Метод Невилля
 
-### Algorithms for polynomials
+### Алгоритмы для многочленов
 
 * Метод Брио-Руффини
 * Метод разделенных разностей Ньютона
 * Пределы действительных корней
 
-### Numerical differentiation
+### Численное дифференцирование
 
 * Метод конечных разностей назад
 * Метод трех точек
 * Метод пяти точек
 
-### Numerical integration
+### Численное интегрирование
 
 * Составной метод трапеций
 * Составной метод Симпсона 1/3
 * Метод Ромберга
 
-### Initial-value problems for ordinary differential equations
+### Задачи Коши для обыкновенных дифференциальных уравнений
 
-- Euler's method
-- Taylor's (Order Two) method
-- Taylor's (Order Four) method
-- Runge-Kutta (Order Four) method
+* Метод Эйлера
+* Метод Тейлора (порядок два)
+* Метод Тейлора (порядок четыре)
+* Метод Рунге-Кутта (порядок четыре)
 
-### Systems of differential equations
+### Системы дифференциальных уравнений
 
-- Runge-Kutta (Order Four) method
+-Метод Рунге-Кутта (порядок 4)
 
-### Methods for Linear Systems
+### Методы для линейных систем
 
-- Gaussian Elimination
-- Backward Substitution
-- Forward Substitution
+* Метод Гаусса (Гауссово исключение)
+* Метод обратной подстановки
+* Метод прямой подстановки
 
-### Iterative Methods for Linear Systems
+### Итерационные методы для линейных систем
 
-- Jacobi method
-- Gauss-Seidel method
+- Метод Якоби
+- Метод Гаусса-Зейделя
