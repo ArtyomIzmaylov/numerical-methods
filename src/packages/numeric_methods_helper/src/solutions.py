@@ -294,3 +294,5 @@ def newton(f, df, x0, toler, iter_max):
 
     root = x
     return root, i, converged
+
+
